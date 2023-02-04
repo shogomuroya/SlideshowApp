@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var startButtom: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
+    @objc func imageViewTapped(_ sender: UITapGestureRecognizer){
+        performSegue(withIdentifier: "toNext", sender: nil)
+        
+    }
+    
     var nowIndex:Int = 0
     
     var timer: Timer!
@@ -27,9 +32,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         imageView.image = imageArray[nowIndex]
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
+        
+        imageView.image = imageView.image!
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue,sender: Any?) {
+        let subViewcontroller:SubViewController = segue.destination as! SubViewController
+        subViewcontroller.image = imageView.image!
+        
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+       }
+  
+        
     @IBOutlet weak var hiddenButtom: UIButton!
     @IBOutlet weak var hiddenButtom2: UIButton!
     @IBAction func slideShowButtom(_ sender: Any) {
