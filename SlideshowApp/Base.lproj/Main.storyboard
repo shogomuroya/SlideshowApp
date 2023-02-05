@@ -16,41 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-3M-uB6">
-                                <rect key="frame" x="24" y="363" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-3M-uB6">
+                                <rect key="frame" x="38" y="409" width="59" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="進む"/>
                                 <connections>
                                     <action selector="nextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bQi-Ht-hb8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-me-Fdk">
-                                <rect key="frame" x="167" y="363" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-me-Fdk">
+                                <rect key="frame" x="167" y="408.66666666666669" width="59" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
                                     <action selector="backImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tfa-xw-gZ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fc0-p0-oVx">
-                                <rect key="frame" x="284" y="363" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gsl-ej-e7b">
+                                <rect key="frame" x="77" y="117" width="239" height="183"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fc0-p0-oVx">
+                                <rect key="frame" x="296" y="409" width="59" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="再生"/>
                                 <connections>
                                     <action selector="slideShowButtom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNp-2i-bF8"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsl-ej-e7b">
-                                <rect key="frame" x="76" y="165" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fc0-p0-oVx" secondAttribute="bottom" constant="374" id="1zA-gd-45W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fc0-p0-oVx" secondAttribute="trailing" constant="38" id="8ih-iJ-GbQ"/>
+                            <constraint firstItem="bI9-3M-uB6" firstAttribute="top" secondItem="Gsl-ej-e7b" secondAttribute="bottom" constant="109" id="BR1-jI-hQG"/>
+                            <constraint firstItem="hIO-me-Fdk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EY1-AX-AG4"/>
+                            <constraint firstItem="Fc0-p0-oVx" firstAttribute="leading" secondItem="hIO-me-Fdk" secondAttribute="trailing" constant="70" id="FJL-Yr-aGb"/>
+                            <constraint firstItem="Fc0-p0-oVx" firstAttribute="top" secondItem="Gsl-ej-e7b" secondAttribute="bottom" constant="109" id="NcK-er-neK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gsl-ej-e7b" secondAttribute="bottom" constant="518" id="SG7-ii-xEv"/>
+                            <constraint firstItem="Gsl-ej-e7b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="dH6-Af-YqC"/>
+                            <constraint firstItem="bI9-3M-uB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="jdX-Uo-Hb8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bI9-3M-uB6" secondAttribute="bottom" constant="374" id="nFX-xx-zib"/>
+                            <constraint firstItem="Gsl-ej-e7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="nVE-8f-4bj"/>
+                            <constraint firstItem="hIO-me-Fdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sxP-Ud-UP2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gsl-ej-e7b" secondAttribute="trailing" constant="77" id="y7j-T6-rHG"/>
+                            <constraint firstItem="hIO-me-Fdk" firstAttribute="leading" secondItem="bI9-3M-uB6" secondAttribute="trailing" constant="70" id="ynJ-eE-xAV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="hiddenButtom" destination="bI9-3M-uB6" id="kuk-ev-U1r"/>
@@ -62,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="-68"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-75.352112676056336"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="5h4-on-Gne">

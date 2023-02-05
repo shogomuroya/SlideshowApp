@@ -22,6 +22,9 @@ class SubViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
      
     var image:UIImage?
+
+   
+    
     
     
     

@@ -37,11 +37,14 @@ class ViewController: UIViewController {
         
         imageView.image = imageView.image!
         
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue,sender: Any?) {
         let subViewcontroller:SubViewController = segue.destination as! SubViewController
         subViewcontroller.image = imageView.image!
+        
+        timer.invalidate()
         
     }
     
@@ -70,6 +73,7 @@ class ViewController: UIViewController {
             hiddenButtom2.isEnabled = true
             
         }
+        
     }
     @objc func changeImage() {
             nowIndex += 1
@@ -80,7 +84,9 @@ class ViewController: UIViewController {
             imageView.image = imageArray[nowIndex]
         }
     
-        
+   
+    
+    
     @IBAction func nextImage(_ sender: Any) {
         nowIndex += 1
           
@@ -98,6 +104,8 @@ class ViewController: UIViewController {
         }
         imageView.image = imageArray[nowIndex]
     }
+    
+    
     }
     
     
