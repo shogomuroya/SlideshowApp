@@ -15,6 +15,17 @@ class ViewController: UIViewController {
     @objc func imageViewTapped(_ sender: UITapGestureRecognizer){
         performSegue(withIdentifier: "toNext", sender: nil)
         
+        if self.timer != nil {
+            self.timer?.invalidate()
+            
+            timer = nil
+
+            startButtom.setTitle("再生", for: .normal)
+            hiddenButtom.isEnabled = true
+            hiddenButtom2.isEnabled = true
+            
+        }
+        
     }
     
     var nowIndex:Int = 0
@@ -38,14 +49,14 @@ class ViewController: UIViewController {
         imageView.image = imageView.image!
         
         
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue,sender: Any?) {
         let subViewcontroller:SubViewController = segue.destination as! SubViewController
         subViewcontroller.image = imageView.image!
         
-        timer.invalidate()
-        
+       
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {

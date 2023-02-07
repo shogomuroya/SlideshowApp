@@ -15,18 +15,15 @@ class SubViewController: UIViewController {
         let result = image
         
         imageView.image = result
-       
+      
 
     }
     
     @IBOutlet weak var imageView: UIImageView!
      
     var image:UIImage?
-
-   
     
-    
-    
+ 
     
     
 }
